@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  diaria = 100;
+  dias = 1;
+
+  constructor(private router: Router) {}
+
+  continuar() {
+    this.router.navigate(['/detalhes'], {
+      state: {
+        diaria: this.diaria,
+        dias: this.dias,
+      },
+    });
+  }
 
 }

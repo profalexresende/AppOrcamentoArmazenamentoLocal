@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Orçamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngFor="let item of orcamentos; let i = index">
+    <ion-item>
+      <ion-label>
+        <h2>R$ {{ item.total }} ({{ item.dias }} dias)</h2>
+        <p>Diária: R$ {{ item.diaria }}</p>
+        <p>Data: {{ item.data }}</p>
+      </ion-label>
+      <ion-button color="danger" (click)="excluir(i)">Excluir</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="voltar()">Voltar</ion-button>
+</ion-content>

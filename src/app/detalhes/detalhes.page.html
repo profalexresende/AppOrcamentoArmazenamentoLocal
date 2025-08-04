@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalhes do Orçamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Resumo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Valor da Diária: R$ {{ diaria }}</p>
+      <p>Quantidade de Dias: {{ dias }}</p>
+      <p><strong>Total: R$ {{ total }}</strong></p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" color="medium" (click)="voltar()">Voltar</ion-button>
+  <ion-button expand="full" (click)="confirmar()">Confirmar</ion-button>
+</ion-content>
